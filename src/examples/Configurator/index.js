@@ -4,7 +4,7 @@
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-dashboard-material-ui
-* Copyright 2023 Centralised Content Hub (https://www.creative-tim.com)
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -73,7 +73,7 @@ function Configurator() {
         px={3}
       >
         <ArgonBox>
-          <ArgonTypography variant="h5">CCH Configurator</ArgonTypography>
+          <ArgonTypography variant="h5">Argon Configurator</ArgonTypography>
           <ArgonTypography variant="body2" color="text">
             See our dashboard options.
           </ArgonTypography>
@@ -132,7 +132,7 @@ function Configurator() {
           </ArgonBox>
         </ArgonBox>
 
-        <ArgonBox mt={3} lineHeight={1}>
+        <ArgonBox mt={4} mb={6} lineHeight={1}>
           <ArgonTypography variant="h6">Sidenav Type</ArgonTypography>
           <ArgonTypography variant="button" color="text" fontWeight="regular">
             Choose between 2 different sidenav types.
@@ -187,7 +187,7 @@ function Configurator() {
           <Switch checked={darkMode} onChange={handleDarkMode} />
         </ArgonBox>
 
-        <ArgonBox mt={5} mb={2}>
+        {/* <ArgonBox mt={5} mb={2}>
           <ArgonBox mb={2}>
             <ArgonButton
               component={Link}
@@ -223,14 +223,14 @@ function Configurator() {
           >
             View Documentation
           </ArgonButton>
-        </ArgonBox>
-        <ArgonBox display="flex" justifyContent="center">
+        </ArgonBox> */}
+        <ArgonBox display="flex" justifyContent="center" mt={6}>
           <GitHubButton
-            href="https://github.com/creativetimofficial/argon-dashboard-material-ui"
+            href="https://github.com/yuvrajthakur18/centralised-content-hub"
             data-icon="octicon-star"
             data-size="large"
             data-show-count="true"
-            aria-label="Star creativetimofficial/argon-dashboard-material-uit on GitHub"
+            aria-label="Star yuvrajthakur18/centralised-content-hub on GitHub"
           >
             Star
           </GitHubButton>
@@ -244,8 +244,8 @@ function Configurator() {
             <ArgonBox mr={1.5}>
               <ArgonButton
                 component={Link}
-                href="//twitter.com/intent/tweet?text=Check%20Argon%20Dashboard%202%20PRO%20MUI%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23react%20%mui&url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fargon-dashboard-material-ui"
-                target="_blank"
+                href="#"
+                // target="_blank"
                 rel="noreferrer"
                 color="dark"
               >
@@ -255,8 +255,8 @@ function Configurator() {
             </ArgonBox>
             <ArgonButton
               component={Link}
-              href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/argon-dashboard-material-ui"
-              target="_blank"
+              href="#"
+              // target="_blank"
               rel="noreferrer"
               color="dark"
             >
