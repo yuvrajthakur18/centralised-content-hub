@@ -41,6 +41,7 @@ function DetailedStaticsCard({ bgColor, title, count, percentage, icon, directio
       <ArgonBox
         bgColor={bgColor === "white" && darkMode ? "transparent" : bgColor}
         variant={bgColor === "white" && darkMode ? "contained" : "gradient"}
+        boxShadow="0px 4px 12px rgba(0, 0, 0, 0.1)"
       >
         <ArgonBox p={1.8}>
           <Grid container>
