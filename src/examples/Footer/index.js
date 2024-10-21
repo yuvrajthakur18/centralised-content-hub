@@ -4,7 +4,7 @@
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-dashboard-material-ui
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Copyright 2023 Centralised Content Hub (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -99,9 +99,9 @@ function Footer({ company, links }) {
 
 // Setting default values for the props of Footer
 Footer.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Creative Tim" },
+  company: { href: "https://www.creative-tim.com/", name: "Centralised Content Hub" },
   links: [
-    { href: "https://www.creative-tim.com/", name: "Creative Tim" },
+    { href: "https://www.creative-tim.com/", name: "Centralised Content Hub" },
     { href: "https://www.creative-tim.com/presentation", name: "About Us" },
     { href: "https://www.creative-tim.com/blog", name: "Blog" },
     { href: "https://www.creative-tim.com/license", name: "License" },

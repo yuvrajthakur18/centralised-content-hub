@@ -7,7 +7,7 @@
 -->
 
 <!--
-Love Creative Tim? Do you need Angular, React, Vuejs or HTML? You can visit:
+Love Centralised Content Hub? Do you need Angular, React, Vuejs or HTML? You can visit:
 👉  https://www.creative-tim.com/bundles
 👉  https://www.creative-tim.com
 -->

@@ -4,7 +4,7 @@
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-dashboard-material-ui
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Copyright 2023 Centralised Content Hub (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -73,7 +73,7 @@ function Configurator() {
         px={3}
       >
         <ArgonBox>
-          <ArgonTypography variant="h5">Argon Configurator</ArgonTypography>
+          <ArgonTypography variant="h5">CCH Configurator</ArgonTypography>
           <ArgonTypography variant="body2" color="text">
             See our dashboard options.
           </ArgonTypography>

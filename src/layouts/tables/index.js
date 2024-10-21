@@ -38,9 +38,23 @@ function Tables() {
   const { columns: menuCols, rows: menuRows } = menuListing;
   const { columns: termCols, rows: termRows } = termListing;
   
+  const bgImage =
+  "https://t4.ftcdn.net/jpg/09/27/95/39/240_F_927953950_8udsj8adbeOj9YNvB7Q2G2EPzUHDDjMO.jpg";
 
   return (
-    <DashboardLayout>
+    <DashboardLayout
+      sx={{
+        backgroundImage: ({ functions: { rgba, linearGradient }, palette: { gradients } }) =>
+          `${linearGradient(
+            rgba(gradients.info.main, 0.6),
+            rgba(gradients.info.state, 0.6)
+          )}, url(${bgImage})`,
+        backgroundPositionY: "50%",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        
+      }}
+    >
       <DashboardNavbar />
       <ArgonBox py={3}>
         <ArgonBox mb={3}>

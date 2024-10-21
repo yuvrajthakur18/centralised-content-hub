@@ -79,7 +79,7 @@ Let us know your thoughts below. And good luck with development!
 
 Quick start options:
 
-- Buy from [Creative Tim](https://www.creative-tim.com/product/argon-dashboard-material-ui?ref=readme-admui).
+- Buy from [Centralised Content Hub](https://www.creative-tim.com/product/argon-dashboard-material-ui?ref=readme-admui).
 
 ## Terminal Commands
 
@@ -201,16 +201,16 @@ If you have questions or need help integrating the product please [contact us](h
 
 ## Licensing
 
-- Copyright 2023 [Creative Tim](https://www.creative-tim.com?ref=readme-admui)
-- Creative Tim [license](https://www.creative-tim.com/license?ref=readme-admui)
+- Copyright 2023 [Centralised Content Hub](https://www.creative-tim.com?ref=readme-admui)
+- Centralised Content Hub [license](https://www.creative-tim.com/license?ref=readme-admui)
 
 ## Useful Links
 
-- [More products](https://www.creative-tim.com/templates?ref=readme-admui) from Creative Tim
+- [More products](https://www.creative-tim.com/templates?ref=readme-admui) from Centralised Content Hub
 
 - [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
 
-- [Freebies](https://www.creative-tim.com/bootstrap-themes/free?ref=readme-admui) from Creative Tim
+- [Freebies](https://www.creative-tim.com/bootstrap-themes/free?ref=readme-admui) from Centralised Content Hub
 
 - [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=readme-admui) (earn money)
 

@@ -4,7 +4,7 @@
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-dashboard-material-ui
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Copyright 2023 Centralised Content Hub (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -40,6 +40,8 @@ import Billing from "layouts/billing";
 import SynchronisationQueue from "layouts/synchronisation-queue";
 import RelationManagement from "layouts/relation-management";
 import Profile from "layouts/profile";
+import SitesConfiguration from "layouts/sitesconfiguration";
+
 
 
 // Argon Dashboard 2 MUI components
@@ -86,7 +88,7 @@ const routes = [
     key: "sites-configuration",
     route: "/sites-configuration",
     icon: <ArgonBox component="i" color="success" fontSize="14px" className="ni ni-credit-card" />,
-    component: <Billing />,
+    component: <SitesConfiguration />,
   },
   // { type: "title", title: "Account Pages", key: "account-pages" },
   {
@@ -97,6 +99,7 @@ const routes = [
     icon: <ArgonBox component="i" color="dark" fontSize="14px" className="ni ni-single-02" />,
     component: <Profile />,
   },
+  
   // {
   //   type: "route",
   //   name: "Log-Out",

@@ -4,7 +4,7 @@
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-dashboard-material-ui
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Copyright 2023 Centralised Content Hub (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -86,7 +86,7 @@ function Footer() {
         </Grid>
         <Grid item xs={12} lg={8} sx={{ textAlign: "center" }}>
           <ArgonTypography variant="body2" color="secondary">
-            Copyright &copy; 2022 Argon by Creative Tim.
+            Copyright &copy; 2022 Argon by Centralised Content Hub.
           </ArgonTypography>
         </Grid>
       </Grid>

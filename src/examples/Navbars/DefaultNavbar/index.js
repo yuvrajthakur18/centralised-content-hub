@@ -5,7 +5,7 @@
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-dashboard-material-ui
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Copyright 2023 Centralised Content Hub (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 

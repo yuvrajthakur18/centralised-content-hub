@@ -5,7 +5,7 @@
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-dashboard-material-ui
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Copyright 2023 Centralised Content Hub (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -44,10 +44,25 @@ import gradientLineChartData from "layouts/dashboard/data/gradientLineChartData"
 import salesTableData from "layouts/dashboard/data/salesTableData";
 import categoriesListData from "layouts/dashboard/data/categoriesListData";
 
+const bgImage =
+  "https://t4.ftcdn.net/jpg/09/27/95/39/240_F_927953950_8udsj8adbeOj9YNvB7Q2G2EPzUHDDjMO.jpg";
+
 function Default() {
   const { size } = typography;
   return (
-    <DashboardLayout>
+    <DashboardLayout
+      sx={{
+        backgroundImage: ({ functions: { rgba, linearGradient }, palette: { gradients } }) =>
+          `${linearGradient(
+            rgba(gradients.info.main, 0.6),
+            rgba(gradients.info.state, 0.6)
+          )}, url(${bgImage})`,
+        backgroundPositionY: "50%",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        
+      }}
+    >
       <DashboardNavbar />
       <ArgonBox py={3}>
         <Grid container spacing={3} mb={3}>
