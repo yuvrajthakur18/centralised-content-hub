@@ -108,9 +108,9 @@ const synchronisationQueueData = {
         ),
         action: (
             <div>
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="primary" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="#669bbc" size="xs" container />
           </div>
         ),
       },
@@ -165,9 +165,9 @@ const synchronisationQueueData = {
         ),
         action: (
             <div>
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="primary" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="#669bbc" size="xs" container />
           </div>
         ),
       },
@@ -222,9 +222,9 @@ const synchronisationQueueData = {
         ),
         action: (
             <div>
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="primary" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="#669bbc" size="xs" container />
           </div>
         ),
       },
@@ -279,9 +279,9 @@ const synchronisationQueueData = {
         ),
         action: (
             <div>
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="primary" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="#669bbc" size="xs" container />
           </div>
         ),
       },
@@ -336,9 +336,9 @@ const synchronisationQueueData = {
         ),
         action: (
             <div>
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="primary" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="#669bbc" size="xs" container />
           </div>
         ),
       },
@@ -393,9 +393,9 @@ const synchronisationQueueData = {
         ),
         action: (
             <div>
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="primary" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="#669bbc" size="xs" container />
           </div>
         ),
       },
@@ -450,9 +450,9 @@ const synchronisationQueueData = {
         ),
         action: (
             <div>
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="primary" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="#669bbc" size="xs" container />
           </div>
         ),
       },
@@ -507,9 +507,9 @@ const synchronisationQueueData = {
         ),
         action: (
             <div>
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="primary" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="#669bbc" size="xs" container />
           </div>
         ),
       },
@@ -564,9 +564,9 @@ const synchronisationQueueData = {
         ),
         action: (
             <div>
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="primary" size="xs" container />
-                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="primary" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">send</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">edit</Icon>}  color="#669bbc" size="xs" container />
+                <ArgonBadge variant="gradient" style={{ marginRight: "4px", cursor: "pointer" }} badgeContent={<Icon fontSize="small">delete</Icon>}  color="#669bbc" size="xs" container />
           </div>
         ),
       },

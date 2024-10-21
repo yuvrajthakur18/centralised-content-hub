@@ -42,6 +42,8 @@ import RelationManagement from "layouts/relation-management";
 import Profile from "layouts/profile";
 import SitesConfiguration from "layouts/sitesconfiguration";
 
+import Content from "layouts/content";
+import NoteAddIcon from '@mui/icons-material/NoteAdd';
 
 
 // Argon Dashboard 2 MUI components
@@ -55,6 +57,14 @@ const routes = [
     route: "/dashboard",
     icon: <ArgonBox component="i" color="primary" fontSize="14px" className="ni ni-tv-2" />,
     component: <Dashboard />,
+  },
+  {
+    type: "route",
+    name: "Content",
+    key: "content",
+    route: "/content",
+    icon: <NoteAddIcon style={{color:"#0077b6"}} />,
+    component: <Content />,
   },
   {
     type: "route",

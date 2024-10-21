@@ -5,62 +5,62 @@ import ivana from "assets/images/ivana-square.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
 
-const profilesListData = [
+const draftlist = [
   {
     image: kal,
-    name: "Boost Productivity",
-    description: "How to Boost Productivity in..",
+    name: "Data Analytics",
+    description: "Leverage data insights to..",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "In Review",
+      label: "Draft",
     },
   },
   {
     image: marie,
-    name: "Electric Vehicles",
-    description: " A deep dive into Electric..",
+    name: "Smart Homes",
+    description: "Latest innovations transforming..",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "In Review",
+      label: "Draft",
     },
   },
   {
     image: ivana,
-    name: "Cybersecurity",
-    description: "cybersecurity practices every..",
+    name: "Leadership Skills",
+    description: "Leadership qualities to inspire..",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "In Review",
+      label: "Draft",
     },
   },
   {
     image: team4,
-    name: "Artificial Intelligence",
-    description: "Artificial intelligence is ..",
+    name: "Mental Health",
+    description: "Mental health should be a top..",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "In Review",
+      label: "Draft",
     },
   },
   {
     image: team3,
-    name: "Sustainable Fashion",
-    description: "A New Era in Retail Explore..",
+    name: "Financial Tips",
+    description: "Get expert advice on managing..",
     action: {
       type: "internal",
       route: "/pages/profile/profile-overview",
       color: "info",
-      label: "In Review",
+      label: "Draft",
     },
   },
 ];
 
-export default profilesListData;
+export default draftlist;

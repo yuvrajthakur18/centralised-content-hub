@@ -26,7 +26,7 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import Link from "@mui/material/Link";
 import Icon from "@mui/material/Icon";
-
+import LogoImage from "./image/logo.png";
 // Argon Dashboard 2 MUI components
 import ArgonBox from "components/ArgonBox";
 import ArgonTypography from "components/ArgonTypography";
@@ -135,7 +135,8 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
         </ArgonBox>
         <ArgonBox component={NavLink} to="/" display="flex" alignItems="center">
           {brand && (
-            <ArgonBox component="img" src={brand} alt="Argon Logo" width="2rem" mr={0.25} />
+            // <ArgonBox component="img" src="/logo.png" alt="Argon Logo" width="2rem" mr={0.25} />
+            <img src={LogoImage} alt="Logo" width="50px" height="50px" style={{marginLeft:"-22px", marginBottom:"-10px"}}/>
           )}
           <ArgonBox
             width={!brandName && "100%"}

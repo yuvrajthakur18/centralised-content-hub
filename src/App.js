@@ -4,7 +4,7 @@
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/argon-dashboard-material-ui
-* Copyright 2023 Centralised Content Hub (https://www.creative-tim.com)
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -54,6 +54,9 @@ import brandDark from "assets/images/logo-ct-dark.png";
 // Icon Fonts
 import "assets/css/nucleo-icons.css";
 import "assets/css/nucleo-svg.css";
+
+import Content from "layouts/content";
+import CreateContent from "layouts/create-content";
 
 export default function App() {
   const [controller, dispatch] = useArgonController();
@@ -186,6 +189,7 @@ export default function App() {
       <Routes>
         {getRoutes(routes)}
         <Route path="*" element={<Navigate to="/dashboard" />} />
+        <Route path="/create-content" element={<CreateContent />} />
       </Routes>
     </ThemeProvider>
   );
