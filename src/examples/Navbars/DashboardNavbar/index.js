@@ -137,7 +137,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
             payment
           </Icon>
         }
-        title={["", "Connection failed for Remote Site Spain"]}
+        title={["Connection failed", "for Remote Site Spain"]}
         date="2 days"
         onClick={handleCloseMenu}
       />
