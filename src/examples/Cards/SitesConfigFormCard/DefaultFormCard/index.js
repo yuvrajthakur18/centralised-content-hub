@@ -4,13 +4,20 @@ import { Card, CardHeader, CardContent, Grid, Button, Collapse, IconButton } fro
 import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 import { useTheme } from '@mui/material/styles';
 
-const DefaultFormCard = ({ title, themeMode = 'light' }) => {
+const DefaultFormCard = ({ 
+  title, 
+  siteName = '', 
+  siteUrl = '', 
+  userName = '', 
+  password = '', 
+  themeMode = 'light' 
+}) => {
   const theme = useTheme(); // Access the theme
   const [formData, setFormData] = useState({
-    siteName: '',
-    siteUrl: '',
-    userName: '',
-    password: '',
+    siteName: siteName,
+    siteUrl: siteUrl,
+    userName: userName,
+    password: password,
     selectedRule: '',
   });
 
@@ -35,7 +42,7 @@ const DefaultFormCard = ({ title, themeMode = 'light' }) => {
   // Dynamic theme colors using theme.palette
   const cardBackgroundColor = themeMode === 'dark' ? theme.palette.background.paper : theme.palette.background.default;
   const cardBorderColor = themeMode === 'dark' ? theme.palette.divider : theme.palette.divider;
-  const textColor = themeMode === 'dark' ? theme.palette.white.main: theme.palette.text.primary;
+  const textColor = themeMode === 'dark' ? theme.palette.white.main : theme.palette.text.primary;
   const inputBackgroundColor = themeMode === 'dark' ? theme.palette.background.default : theme.palette.background.paper;
   const inputBorderColor = theme.palette.divider;
   const focusBorderColor = theme.palette.primary.main;
@@ -48,7 +55,7 @@ const DefaultFormCard = ({ title, themeMode = 'light' }) => {
         borderRadius: '16px',
         boxShadow: theme.shadows[4],
         border: `1px solid ${cardBorderColor}`,
-        width: '90%',
+        width: '99%',
         transition: 'background-color 0.3s ease',
       }}
     >
@@ -294,6 +301,10 @@ const DefaultFormCard = ({ title, themeMode = 'light' }) => {
 
 DefaultFormCard.propTypes = {
   title: PropTypes.string,
+  siteName: PropTypes.string,
+  siteUrl: PropTypes.string,
+  userName: PropTypes.string,
+  password: PropTypes.string,
   themeMode: PropTypes.string,
 };
 

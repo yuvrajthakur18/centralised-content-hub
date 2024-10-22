@@ -91,14 +91,36 @@ function Overview() {
       <DashboardNavbar />
       <ArgonBox mt={5} mb={3}>
         <Grid container spacing={3}>
-          <Grid item xs={12} xl={4}>
-            <SitesConfigFormCard title="Site 1" />
+          <Grid item xs={12} xl={3}>
+            <SitesConfigFormCard  
+            title="Site 1"
+            siteName="Remote Site India"
+            siteUrl="https://dev-remote-site-india.pantheonsite.io"
+            userName="admin@123"
+            password="myPassword"
+             
+            />
           </Grid>
-          <Grid item xs={12} xl={4}>
-            <SitesConfigFormCard title="Site 2" />
+          <Grid item xs={12} xl={3}>
+            <SitesConfigFormCard 
+            title="Site 2"
+            siteName="Remote Site Spain"
+            siteUrl="https://dev-remote-site-spain.pantheonsite.io"
+            userName="admin@123"
+            password="myPassword"
+             />
           </Grid>
-          <Grid item xs={12} xl={4}>
-            <SitesConfigFormCard title="Site 3" />
+          <Grid item xs={12} xl={3}>
+            <SitesConfigFormCard 
+            title="Site 3" 
+            siteName="Remote Site China"
+            siteUrl="https://dev-remote-site-china.pantheonsite.io/"
+            userName="admin@123"
+            password="myPassword"
+             />
+          </Grid>
+          <Grid item xs={12} md={6} xl={3}>
+                <PlaceholderCard title={{ variant: "h5", text: "Add New Site" }} outlined />
           </Grid>
 
         </Grid>
