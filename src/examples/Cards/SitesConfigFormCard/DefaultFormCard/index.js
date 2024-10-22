@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  Grid,
-  Button,
-  Collapse,
-  IconButton
-} from '@mui/material';
-import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material'; // Use an arrow icon for expanding/collapsing
+import { Card, CardHeader, CardContent, Grid, Button, Collapse, IconButton } from '@mui/material';
+import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
+import { useTheme } from '@mui/material/styles';
 
-const DefaultFormCard = ({ title }) => {
+const DefaultFormCard = ({ title, themeMode = 'light' }) => {
+  const theme = useTheme(); // Access the theme
   const [formData, setFormData] = useState({
     siteName: '',
     siteUrl: '',
@@ -20,10 +14,10 @@ const DefaultFormCard = ({ title }) => {
     selectedRule: '',
   });
 
-  const [expanded, setExpanded] = useState(false); // Collapse state
+  const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
-    setExpanded(!expanded); // Toggle expand/collapse
+    setExpanded(!expanded);
   };
 
   const handleChange = (e) => {
@@ -35,31 +29,47 @@ const DefaultFormCard = ({ title }) => {
   };
 
   const handleSave = () => {
-    // Handle form submission or save action here
     console.log(formData);
   };
 
+  // Dynamic theme colors using theme.palette
+  const cardBackgroundColor = themeMode === 'dark' ? theme.palette.background.paper : theme.palette.background.default;
+  const cardBorderColor = themeMode === 'dark' ? theme.palette.divider : theme.palette.divider;
+  const textColor = themeMode === 'dark' ? theme.palette.white.main: theme.palette.text.primary;
+  const inputBackgroundColor = themeMode === 'dark' ? theme.palette.background.default : theme.palette.background.paper;
+  const inputBorderColor = theme.palette.divider;
+  const focusBorderColor = theme.palette.primary.main;
+
   return (
-    <Card style={{
-      padding: '24px',
-      backgroundColor: '#fefefe',
-      borderRadius: '16px',
-      boxShadow: '0 8px 20px rgba(0,0,0,0.12)',
-      border: '1px solid #e0e0e0',
-      width: '90%',
-    }}>
-      <CardHeader 
-        title={title || 'Form Details'} 
+    <Card
+      style={{
+        padding: '24px',
+        backgroundColor: cardBackgroundColor,
+        borderRadius: '16px',
+        boxShadow: theme.shadows[4],
+        border: `1px solid ${cardBorderColor}`,
+        width: '90%',
+        transition: 'background-color 0.3s ease',
+      }}
+    >
+      <CardHeader
+        title={title || 'Form Details'}
         action={
           <IconButton onClick={handleExpandClick} aria-expanded={expanded}>
-            <ExpandMoreIcon style={{ transform: expanded ? 'rotate(180deg)' : 'rotate(0)', transition: 'transform 0.3s ease' }} />
+            <ExpandMoreIcon
+              style={{
+                transform: expanded ? 'rotate(180deg)' : 'rotate(0)',
+                transition: 'transform 0.3s ease',
+                color: '#9B7EBD',
+              }}
+            />
           </IconButton>
         }
         style={{
           fontSize: '20px',
           fontWeight: '600',
-          textAlign: 'center',
-          color: '#333'
+          textAlign: 'left',
+          color: '#9B7EBD',
         }}
       />
       <CardContent>
@@ -67,7 +77,15 @@ const DefaultFormCard = ({ title }) => {
 
           {/* Site Name */}
           <Grid item xs={12}>
-            <label style={{ display: 'block', marginBottom: '2px', fontSize: '14px', fontWeight: '400' }}>
+            <label
+              style={{
+                display: 'block',
+                marginBottom: '2px',
+                fontSize: '14px',
+                fontWeight: '400',
+                color: '#9B7EBD',
+              }}
+            >
               Site Name
             </label>
             <input
@@ -78,23 +96,32 @@ const DefaultFormCard = ({ title }) => {
               required
               placeholder="Enter Site Name..."
               style={{
-                backgroundColor: "#ffffff",
-                borderRadius: "10px",
-                padding: "10px",
-                width: "100%",
-                border: "1px solid #ddd",
+                backgroundColor: inputBackgroundColor,
+                borderRadius: '10px',
+                padding: '10px',
+                width: '100%',
+                border: `1px solid ${inputBorderColor}`,
                 outline: 'none',
                 fontSize: '12px',
+                color: '#9B7EBD',
                 transition: 'border-color 0.3s ease',
               }}
-              onFocus={(e) => e.target.style.borderColor = "#007BFF"}
-              onBlur={(e) => e.target.style.borderColor = "#ddd"}
+              onFocus={(e) => (e.target.style.borderColor = focusBorderColor)}
+              onBlur={(e) => (e.target.style.borderColor = inputBorderColor)}
             />
           </Grid>
 
           {/* Site URL */}
           <Grid item xs={12}>
-            <label style={{ display: 'block', marginBottom: '2px', fontSize: '14px', fontWeight: '400' }}>
+            <label
+              style={{
+                display: 'block',
+                marginBottom: '2px',
+                fontSize: '14px',
+                fontWeight: '400',
+                color: '#9B7EBD',
+              }}
+            >
               Site URL
             </label>
             <input
@@ -105,27 +132,35 @@ const DefaultFormCard = ({ title }) => {
               required
               placeholder="Enter Site URL..."
               style={{
-                backgroundColor: "#ffffff",
-                borderRadius: "10px",
-                padding: "10px",
-                width: "100%",
-                border: "1px solid #ddd",
+                backgroundColor: inputBackgroundColor,
+                borderRadius: '10px',
+                padding: '10px',
+                width: '100%',
+                border: `1px solid ${inputBorderColor}`,
                 outline: 'none',
                 fontSize: '12px',
+                color: '#9B7EBD',
                 transition: 'border-color 0.3s ease',
               }}
-              onFocus={(e) => e.target.style.borderColor = "#007BFF"}
-              onBlur={(e) => e.target.style.borderColor = "#ddd"}
+              onFocus={(e) => (e.target.style.borderColor = focusBorderColor)}
+              onBlur={(e) => (e.target.style.borderColor = inputBorderColor)}
             />
           </Grid>
 
           {/* Collapsible Content */}
           <Collapse in={expanded} timeout="auto" unmountOnExit>
-            <Grid container spacing={4} style={{ marginTop: '1px', marginLeft: '6px', width:'99%' }}> {/* Added marginLeft for alignment */}
-
+            <Grid container spacing={4} style={{ marginTop: '1px', marginLeft: '6px', width: '99%' }}>
               {/* User Name */}
               <Grid item xs={12}>
-                <label style={{ display: 'block', marginBottom: '2px', fontSize: '14px', fontWeight: '400' }}>
+                <label
+                  style={{
+                    display: 'block',
+                    marginBottom: '2px',
+                    fontSize: '14px',
+                    fontWeight: '400',
+                    color: '#9B7EBD',
+                  }}
+                >
                   User Name
                 </label>
                 <input
@@ -136,23 +171,32 @@ const DefaultFormCard = ({ title }) => {
                   required
                   placeholder="Enter User Name..."
                   style={{
-                    backgroundColor: "#ffffff",
-                    borderRadius: "10px",
-                    padding: "10px",
-                    width: "100%",
-                    border: "1px solid #ddd",
+                    backgroundColor: inputBackgroundColor,
+                    borderRadius: '10px',
+                    padding: '10px',
+                    width: '100%',
+                    border: `1px solid ${inputBorderColor}`,
                     outline: 'none',
                     fontSize: '12px',
+                    color: '#9B7EBD',
                     transition: 'border-color 0.3s ease',
                   }}
-                  onFocus={(e) => e.target.style.borderColor = "#007BFF"}
-                  onBlur={(e) => e.target.style.borderColor = "#ddd"}
+                  onFocus={(e) => (e.target.style.borderColor = focusBorderColor)}
+                  onBlur={(e) => (e.target.style.borderColor = inputBorderColor)}
                 />
               </Grid>
 
               {/* Password */}
               <Grid item xs={12}>
-                <label style={{ display: 'block', marginBottom: '2px', fontSize: '14px', fontWeight: '400' }}>
+                <label
+                  style={{
+                    display: 'block',
+                    marginBottom: '2px',
+                    fontSize: '14px',
+                    fontWeight: '400',
+                    color: '#9B7EBD',
+                  }}
+                >
                   Password
                 </label>
                 <input
@@ -163,23 +207,32 @@ const DefaultFormCard = ({ title }) => {
                   required
                   placeholder="Enter Password..."
                   style={{
-                    backgroundColor: "#ffffff",
-                    borderRadius: "10px",
-                    padding: "10px",
-                    width: "100%",
-                    border: "1px solid #ddd",
+                    backgroundColor: inputBackgroundColor,
+                    borderRadius: '10px',
+                    padding: '10px',
+                    width: '100%',
+                    border: `1px solid ${inputBorderColor}`,
                     outline: 'none',
                     fontSize: '12px',
+                    color: '#9B7EBD',
                     transition: 'border-color 0.3s ease',
                   }}
-                  onFocus={(e) => e.target.style.borderColor = "#007BFF"}
-                  onBlur={(e) => e.target.style.borderColor = "#ddd"}
+                  onFocus={(e) => (e.target.style.borderColor = focusBorderColor)}
+                  onBlur={(e) => (e.target.style.borderColor = inputBorderColor)}
                 />
               </Grid>
 
               {/* Available Rules */}
               <Grid item xs={12}>
-                <label style={{ display: 'block', marginBottom: '2px', fontSize: '14px', fontWeight: '400' }}>
+                <label
+                  style={{
+                    display: 'block',
+                    marginBottom: '2px',
+                    fontSize: '14px',
+                    fontWeight: '400',
+                    color: '#9B7EBD',
+                  }}
+                >
                   Available Rules
                 </label>
                 <select
@@ -187,19 +240,22 @@ const DefaultFormCard = ({ title }) => {
                   value={formData.selectedRule}
                   onChange={handleChange}
                   style={{
-                    backgroundColor: "#ffffff",
-                    borderRadius: "10px",
-                    padding: "10px",
-                    width: "100%",
-                    border: "1px solid #ddd",
+                    backgroundColor: inputBackgroundColor,
+                    borderRadius: '10px',
+                    padding: '10px',
+                    width: '100%',
+                    border: `1px solid ${inputBorderColor}`,
                     outline: 'none',
                     fontSize: '12px',
+                    color: '#9B7EBD',
                     transition: 'border-color 0.3s ease',
                   }}
-                  onFocus={(e) => e.target.style.borderColor = "#007BFF"}
-                  onBlur={(e) => e.target.style.borderColor = "#ddd"}
+                  onFocus={(e) => (e.target.style.borderColor = focusBorderColor)}
+                  onBlur={(e) => (e.target.style.borderColor = inputBorderColor)}
                 >
-                  <option value="" disabled>Select Rule</option>
+                  <option value="" disabled>
+                    Select Rule
+                  </option>
                   <option value="editor">Rule 1</option>
                   <option value="reviewer">Rule 2</option>
                   <option value="admin">Rule 3</option>
@@ -220,14 +276,12 @@ const DefaultFormCard = ({ title }) => {
                 borderRadius: '10px',
                 fontWeight: 'bold',
                 fontSize: '16px',
-                backgroundColor: '#007BFF',
-                color: '#fff',
+                backgroundColor: focusBorderColor,
+                color: theme.palette.primary.contrastText,
                 textTransform: 'none',
-                boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
                 transition: 'background-color 0.3s ease',
-                background:"#669BBC"
               }}
-              
             >
               Save
             </Button>
@@ -238,9 +292,9 @@ const DefaultFormCard = ({ title }) => {
   );
 };
 
-// Add PropTypes validation
 DefaultFormCard.propTypes = {
   title: PropTypes.string,
+  themeMode: PropTypes.string,
 };
 
 export default DefaultFormCard;

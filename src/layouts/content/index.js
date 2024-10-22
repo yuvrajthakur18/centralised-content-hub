@@ -41,7 +41,7 @@ import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 const bgImage =
-  "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/profile-layout-header.jpg";
+  "https://t4.ftcdn.net/jpg/09/27/95/39/240_F_927953950_8udsj8adbeOj9YNvB7Q2G2EPzUHDDjMO.jpg";
 
 function Overview() {
   const navigate = useNavigate(); // Initialize useNavigate
@@ -52,7 +52,19 @@ function Overview() {
   };
   
   return (
-    <DashboardLayout> 
+    <DashboardLayout
+      sx={{
+        backgroundImage: ({ functions: { rgba, linearGradient }, palette: { gradients } }) =>
+          `${linearGradient(
+            rgba(gradients.info.main, 0.6),
+            rgba(gradients.info.state, 0.6)
+          )}, url(${bgImage})`,
+        backgroundPositionY: "50%",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        
+      }}
+    > 
     <DashboardNavbar />    
       
       <ArgonBox mb={14} mt={3}>

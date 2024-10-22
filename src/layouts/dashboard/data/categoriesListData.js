@@ -21,7 +21,7 @@ const categoriesListData = [
         </ArgonTypography>
       </>
     ),
-    route: "/",
+    route: "/media",
   },
   {
     color: "dark",
@@ -39,7 +39,7 @@ const categoriesListData = [
         
       </>
     ),
-    route: "/",
+    route: "/content",
   },
   {
     color: "dark",
@@ -53,7 +53,7 @@ const categoriesListData = [
         </ArgonTypography>
       </>
     ),
-    route: "/",
+    route: "/taxonomy",
   },
   {
     color: "dark",
@@ -70,7 +70,7 @@ const categoriesListData = [
         </ArgonTypography>
       </>
     ),
-    route: "/",
+    route: "/menu",
   },
 ];
 

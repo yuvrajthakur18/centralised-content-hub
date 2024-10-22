@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Card, CardHeader, CardContent, Collapse, IconButton, Checkbox, Grid, Typography, Button } from "@mui/material";
+import { IconButton, Collapse, Checkbox, Grid, Typography, Button, Card, CardHeader, CardContent } from "@mui/material";
 import { ExpandMore, ExpandLess } from "@mui/icons-material";
+import ArgonBox from "components/ArgonBox";
+import ArgonTypography from "components/ArgonTypography";
+import { useTheme } from "@mui/material/styles";
 
-const DefaultRuleCard = ({ title, checkboxData, onSave }) => {
+function DefaultRuleCard({ title, checkboxData, onSave, light }) {
+  const theme = useTheme(); // Get current theme
   const [expandedContent, setExpandedContent] = useState(false);
   const [expandedMedia, setExpandedMedia] = useState(false);
   const [expandedMenus, setExpandedMenus] = useState(false);
   const [expandedTaxonomy, setExpandedTaxonomy] = useState(false);
-
   const [formData, setFormData] = useState(checkboxData);
 
   const handleCheckboxChange = (category, index) => {
@@ -23,146 +26,174 @@ const DefaultRuleCard = ({ title, checkboxData, onSave }) => {
   };
 
   return (
-    <Card 
-      elevation={3} 
-      sx={{ borderRadius: 2, padding: 2, marginBottom: 2 }}
+    <Card
+      sx={{
+        borderRadius: 2,
+        padding: 2,
+        marginBottom: 2,
+        backgroundColor: light ? theme.palette.background.default : "transparent",
+        border: `1px solid ${theme.palette.divider}`,
+        boxShadow: theme.shadows[3],
+      }}
     >
-      <CardHeader 
-        title={title} 
-        titleTypographyProps={{ variant: 'h5', color: 'primary' }} 
-        sx={{ borderBottom: '1px solid #eee', paddingBottom: 1 }} 
+      <CardHeader
+        title={title}
+        sx={{
+          paddingBottom: 1,
+          color: light ? theme.palette.white.main : theme.palette.text.primary,
+        }}
       />
-      <CardContent sx={{ padding: '16px 24px' }}>
-        {/* Content Section */}
-        <Grid container alignItems="center" justifyContent="space-between" sx={{ marginBottom: 1 }}>
-          <Grid item>
-            <Typography variant="h6" color="textSecondary">Content Types</Typography>
-          </Grid>
-          <Grid item>
-            <IconButton onClick={() => setExpandedContent(!expandedContent)} size="small" color="primary">
+      <CardContent>
+        <ArgonBox>
+          <ArgonBox display="flex" justifyContent="space-between" alignItems="center" my={1}>
+            <Typography variant="h6">Content Types</Typography>
+            <IconButton
+              onClick={() => setExpandedContent(!expandedContent)}
+              size="small"
+              sx={{
+                color: light ? theme.palette.white.main : theme.palette.primary.main,
+              }}
+            >
               {expandedContent ? <ExpandLess /> : <ExpandMore />}
             </IconButton>
-          </Grid>
-        </Grid>
-        <Collapse in={expandedContent} sx={{ marginBottom: 1 }}>
-          <Grid container spacing={1} sx={{ backgroundColor: '#ffffff', padding: 1, borderRadius: 1 }}>
-            {formData.contentTypes.map((item, index) => (
-              <Grid item xs={12} key={index}>
-                <Checkbox
-                  checked={item.checked}
-                  onChange={() => handleCheckboxChange("contentType", index)}
-                  color="secondary"
-                /> {item.label}
-              </Grid>
-            ))}
-          </Grid>
-        </Collapse>
-        {/* Media Types Section */}
-        <Grid container alignItems="center" justifyContent="space-between" sx={{ marginBottom: 1 }}>
-          <Grid item>
-            <Typography variant="h6" color="textSecondary">Media Types</Typography>
-          </Grid>
-          <Grid item>
-            <IconButton onClick={() => setExpandedMedia(!expandedMedia)} size="small" color="primary">
+          </ArgonBox>
+          <Collapse in={expandedContent}>
+            <ArgonBox p={2}>
+              {formData.contentTypes.map((item, index) => (
+                <Grid container key={index} alignItems="center" sx={{ marginBottom: 1 }}>
+                  <Checkbox
+                    checked={item.checked}
+                    onChange={() => handleCheckboxChange("contentTypes", index)}
+                    sx={{ color: light ? theme.palette.white.main : theme.palette.primary.main }}
+                  />
+                  <ArgonTypography>{item.label}</ArgonTypography>
+                </Grid>
+              ))}
+            </ArgonBox>
+          </Collapse>
+        </ArgonBox>
+
+        <ArgonBox>
+          <ArgonBox display="flex" justifyContent="space-between" alignItems="center" my={1}>
+            <Typography variant="h6">Media Types</Typography>
+            <IconButton
+              onClick={() => setExpandedMedia(!expandedMedia)}
+              size="small"
+              sx={{
+                color: light ? theme.palette.white.main : theme.palette.primary.main,
+              }}
+            >
               {expandedMedia ? <ExpandLess /> : <ExpandMore />}
             </IconButton>
-          </Grid>
-        </Grid>
-        <Collapse in={expandedMedia} sx={{ marginBottom: 1 }}>
-          <Grid container spacing={1} sx={{ backgroundColor: '#ffffff', padding: 1, borderRadius: 1 }}>
-            {formData.mediaTypes.map((item, index) => (
-              <Grid item xs={12} key={index}>
-                <Checkbox
-                  checked={item.checked}
-                  onChange={() => handleCheckboxChange("mediaTypes", index)}
-                  color="secondary"
-                /> {item.label}
-              </Grid>
-            ))}
-          </Grid>
-        </Collapse>
+          </ArgonBox>
+          <Collapse in={expandedMedia}>
+            <ArgonBox p={2}>
+              {formData.mediaTypes.map((item, index) => (
+                <Grid container key={index} alignItems="center" sx={{ marginBottom: 1 }}>
+                  <Checkbox
+                    checked={item.checked}
+                    onChange={() => handleCheckboxChange("mediaTypes", index)}
+                    sx={{ color: light ? theme.palette.white.main : theme.palette.primary.main }}
+                  />
+                  <ArgonTypography>{item.label}</ArgonTypography>
+                </Grid>
+              ))}
+            </ArgonBox>
+          </Collapse>
+        </ArgonBox>
 
-        {/* Available Menus Section */}
-        <Grid container alignItems="center" justifyContent="space-between" sx={{ marginBottom: 1 }}>
-          <Grid item>
-            <Typography variant="h6" color="textSecondary">Available Menus</Typography>
-          </Grid>
-          <Grid item>
-            <IconButton onClick={() => setExpandedMenus(!expandedMenus)} size="small" color="primary">
+        <ArgonBox>
+          <ArgonBox display="flex" justifyContent="space-between" alignItems="center" my={1}>
+            <Typography variant="h6">Available Menus</Typography>
+            <IconButton
+              onClick={() => setExpandedMenus(!expandedMenus)}
+              size="small"
+              sx={{
+                color: light ? theme.palette.white.main : theme.palette.primary.main,
+              }}
+            >
               {expandedMenus ? <ExpandLess /> : <ExpandMore />}
             </IconButton>
-          </Grid>
-        </Grid>
-        <Collapse in={expandedMenus} sx={{ marginBottom: 1 }}>
-          <Grid container spacing={1} sx={{ backgroundColor: '#fffff', padding: 1, borderRadius: 1 }}>
-            {formData.menus.map((item, index) => (
-              <Grid item xs={12} key={index}>
-                <Checkbox
-                  checked={item.checked}
-                  onChange={() => handleCheckboxChange("menus", index)}
-                  color="secondary"
-                /> {item.label}
-              </Grid>
-            ))}
-          </Grid>
-        </Collapse>
+          </ArgonBox>
+          <Collapse in={expandedMenus}>
+            <ArgonBox p={2}>
+              {formData.menus.map((item, index) => (
+                <Grid container key={index} alignItems="center" sx={{ marginBottom: 1 }}>
+                  <Checkbox
+                    checked={item.checked}
+                    onChange={() => handleCheckboxChange("menus", index)}
+                    sx={{ color: light ? theme.palette.white.main : theme.palette.primary.main }}
+                  />
+                  <ArgonTypography>{item.label}</ArgonTypography>
+                </Grid>
+              ))}
+            </ArgonBox>
+          </Collapse>
+        </ArgonBox>
 
-        {/* Available Taxonomy Vocabularies Section */}
-        <Grid container alignItems="center" justifyContent="space-between" sx={{ marginBottom: 1 }}>
-          <Grid item>
-            <Typography variant="h6" color="textSecondary">Available Taxonomy</Typography>
-          </Grid>
-          <Grid item>
-            <IconButton onClick={() => setExpandedTaxonomy(!expandedTaxonomy)} size="small" color="primary">
+        <ArgonBox>
+          <ArgonBox display="flex" justifyContent="space-between" alignItems="center" my={1}>
+            <Typography variant="h6">Available Taxonomies</Typography>
+            <IconButton
+              onClick={() => setExpandedTaxonomy(!expandedTaxonomy)}
+              size="small"
+              sx={{
+                color: light ? theme.palette.white.main : theme.palette.primary.main,
+              }}
+            >
               {expandedTaxonomy ? <ExpandLess /> : <ExpandMore />}
             </IconButton>
-          </Grid>
-        </Grid>
-        <Collapse in={expandedTaxonomy} sx={{ marginBottom: 1 }}>
-          <Grid container spacing={1} sx={{ backgroundColor: '#ffffff', padding: 1, borderRadius: 1 }}>
-            {formData.taxonomies.map((item, index) => (
-              <Grid item xs={12} key={index}>
-                <Checkbox
-                  checked={item.checked}
-                  onChange={() => handleCheckboxChange("taxonomies", index)}
-                  color="primary"
-                /> {item.label}
-              </Grid>
-            ))}
-          </Grid>
-        </Collapse>
+          </ArgonBox>
+          <Collapse in={expandedTaxonomy}>
+            <ArgonBox p={2}>
+              {formData.taxonomies.map((item, index) => (
+                <Grid container key={index} alignItems="center" sx={{ marginBottom: 1 }}>
+                  <Checkbox
+                    checked={item.checked}
+                    onChange={() => handleCheckboxChange("taxonomies", index)}
+                    sx={{ color: light ? theme.palette.white.main : theme.palette.primary.main }}
+                  />
+                  <ArgonTypography>{item.label}</ArgonTypography>
+                </Grid>
+              ))}
+            </ArgonBox>
+          </Collapse>
+        </ArgonBox>
 
-        {/* Save Button */}
-        <Button
-              fullWidth
-              variant="contained"
-              color="primary"
-              onClick={handleSave}
-              style={{
-                padding: '12px 0',
-                borderRadius: '10px',
-                fontWeight: 'bold',
-                fontSize: '16px',
-                backgroundColor: '#007BFF',
-                color: '#fff',
-                textTransform: 'none',
-                boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-                transition: 'background-color 0.3s ease',
-                background:"#669BBC"
-              }}
-              
-            >
-              Save
-            </Button>
+        <ArgonBox mt={3}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleSave}
+            fullWidth
+            sx={{
+              borderRadius: "10px",
+              fontWeight: "bold",
+              textTransform: "none",
+              backgroundColor: light ? theme.palette.white.main : theme.palette.primary.main,
+              color: theme.palette.primary.contrastText,
+              "&:hover": {
+                backgroundColor: theme.palette.primary.dark,
+              },
+            }}
+          >
+            Save
+          </Button>
+        </ArgonBox>
       </CardContent>
     </Card>
   );
-};
+}
 
-// Add PropTypes validation
 DefaultRuleCard.propTypes = {
   title: PropTypes.string.isRequired,
   checkboxData: PropTypes.shape({
+    contentTypes: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        checked: PropTypes.bool.isRequired,
+      })
+    ).isRequired,
     mediaTypes: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string.isRequired,
@@ -183,6 +214,7 @@ DefaultRuleCard.propTypes = {
     ).isRequired,
   }).isRequired,
   onSave: PropTypes.func.isRequired,
+  light: PropTypes.bool,
 };
 
 export default DefaultRuleCard;

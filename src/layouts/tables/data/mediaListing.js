@@ -43,6 +43,7 @@ function Function({ job, org }) {
 
 const authorsTableData = {
   columns: [
+    { name: "id", align: "center" },
     { name: "media", align: "left" },
     { name: "type", align: "left" },
     { name: "published", align: "center" },
@@ -52,6 +53,11 @@ const authorsTableData = {
 
   rows: [
     {
+      id: (
+        <ArgonTypography variant="caption" color="secondary" fontWeight="medium">
+          16
+        </ArgonTypography>
+      ),
       media: <Author image={team2} name="JohnMichael.jpg" email=" " />,
       type: <Function job="Image" org=" " />,
       published: (
@@ -70,6 +76,11 @@ const authorsTableData = {
       ),
     },
     {
+      id: (
+        <ArgonTypography variant="caption" color="secondary" fontWeight="medium">
+          19
+        </ArgonTypography>
+      ),
       media: <Author image={team3} name="AlexaLiras.jpg" email=" " />,
       type: <Function job="Image" org=" " />,
       published: (
@@ -88,6 +99,11 @@ const authorsTableData = {
       ),
     },
     {
+      id: (
+        <ArgonTypography variant="caption" color="secondary" fontWeight="medium">
+          18
+        </ArgonTypography>
+      ),
       media: <Author image={team4} name="LaurentPerrier.jpg" email=" " />,
       type: <Function job="Image" org=" " />,
       published: (
@@ -106,6 +122,11 @@ const authorsTableData = {
       ),
     },
     {
+      id: (
+        <ArgonTypography variant="caption" color="secondary" fontWeight="medium">
+          16
+        </ArgonTypography>
+      ),
       media: <Author image={team3} name="MichaelLevi.jpg" email=" " />,
       type: <Function job="Image" org=" " />,
       published: (
@@ -124,6 +145,11 @@ const authorsTableData = {
       ),
     },
     {
+      id: (
+        <ArgonTypography variant="caption" color="secondary" fontWeight="medium">
+          14
+        </ArgonTypography>
+      ),
       media: <Author image={team2} name="RichardGran.jpg" email=" " />,
       type: <Function job="Image" org=" " />,
       published: (
@@ -142,6 +168,11 @@ const authorsTableData = {
       ),
     },
     {
+      id: (
+        <ArgonTypography variant="caption" color="secondary" fontWeight="medium">
+          12
+        </ArgonTypography>
+      ),
       media: <Author image={team4} name="MiriamEric.jpg" email=" " />,
       type: <Function job="Image" org=" " />,
       published: (

@@ -19,6 +19,7 @@ function Function({ job, org }) {
 
 const taxonomyTableData = {
   columns: [
+    { name: "id", align: "center" },
     { name: "taxonomy", align: "left" },
     { name: "type", align: "left" },
     { name: "published", align: "center" },
@@ -28,9 +29,14 @@ const taxonomyTableData = {
 
   rows: [
     {
+      id: (
+        <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
+          14
+        </ArgonTypography>
+      ),
       taxonomy: (
         <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
-          Web Development
+          Web
         </ArgonTypography>
       ),
       type: <Function job="Category" org="Technology" />,
@@ -51,9 +57,14 @@ const taxonomyTableData = {
       ),
     },
     {
+      id: (
+        <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
+          12
+        </ArgonTypography>
+      ),
       taxonomy: (
         <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
-          Artificial Intelligence
+          A.I.
         </ArgonTypography>
       ),
       type: <Function job="Category" org="Technology" />,
@@ -74,9 +85,14 @@ const taxonomyTableData = {
       ),
     },
     {
+      id: (
+        <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
+          15
+        </ArgonTypography>
+      ),
       taxonomy: (
         <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
-          Cloud Computing
+          Cloud
         </ArgonTypography>
       ),
       type: <Function job="Category" org="Technology" />,
@@ -97,9 +113,14 @@ const taxonomyTableData = {
       ),
     },
     {
+      id: (
+        <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
+          18
+        </ArgonTypography>
+      ),
       taxonomy: (
         <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
-          Machine Learning
+          M.L.
         </ArgonTypography>
       ),
       type: <Function job="Category" org="Technology" />,
@@ -120,9 +141,14 @@ const taxonomyTableData = {
       ),
     },
     {
+      id: (
+        <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
+          17
+        </ArgonTypography>
+      ),
       taxonomy: (
         <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
-          DevOps Practices
+          DevOps
         </ArgonTypography>
       ),
       type: <Function job="Category" org="Technology" />,

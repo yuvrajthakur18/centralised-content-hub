@@ -19,6 +19,7 @@ function Function({ job, org }) {
 
 const menuTableData = {
   columns: [
+    { name: "id", align: "center" },
     { name: "menu", align: "left" },
     { name: "type", align: "left" },
     { name: "published", align: "center" },
@@ -28,6 +29,11 @@ const menuTableData = {
 
   rows: [
     {
+      id: (
+        <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
+          16
+        </ArgonTypography>
+      ),
       menu: (
         <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
           Home
@@ -51,6 +57,11 @@ const menuTableData = {
       ),
     },
     {
+      id: (
+        <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
+          15
+        </ArgonTypography>
+      ),
       menu: (
         <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
           About Us
@@ -74,6 +85,11 @@ const menuTableData = {
       ),
     },
     {
+      id: (
+        <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
+          20
+        </ArgonTypography>
+      ),
       menu: (
         <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
           Services
@@ -97,6 +113,11 @@ const menuTableData = {
       ),
     },
     {
+      id: (
+        <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
+          21
+        </ArgonTypography>
+      ),
       menu: (
         <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
           Contact
@@ -120,6 +141,11 @@ const menuTableData = {
       ),
     },
     {
+      id: (
+        <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
+          19
+        </ArgonTypography>
+      ),
       menu: (
         <ArgonTypography variant="caption" fontWeight="bold" padding="10px" color="text">
           Blog

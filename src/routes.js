@@ -72,7 +72,7 @@ const routes = [
     key: "data-listings",
     route: "/data-listings",
     icon: (
-      <ArgonBox component="i" color="warning" fontSize="14px" className="ni ni-calendar-grid-58" />
+      <ArgonBox component="i" color="warning" fontSize="14px" className="ni ni-bullet-list-67 " />
     ),
     component: <Tables />,
   },
@@ -81,7 +81,7 @@ const routes = [
     name: "Synchronisation Queue",
     key: "synchronisation-queue",
     route: "/synchronisation-queue",
-    icon: <ArgonBox component="i" color="info" fontSize="14px" className="ni ni-app" />,
+    icon: <ArgonBox component="i" color="info" fontSize="14px" className="ni ni-credit-card" />,
     component: <SynchronisationQueue />,
   },
   {
@@ -97,7 +97,7 @@ const routes = [
     name: "Sites Configuration",
     key: "sites-configuration",
     route: "/sites-configuration",
-    icon: <ArgonBox component="i" color="success" fontSize="14px" className="ni ni-credit-card" />,
+    icon: <ArgonBox component="i" color="secondary" fontSize="14px" className="ni ni-settings-gear-65" />,
     component: <SitesConfiguration />,
   },
   // { type: "title", title: "Account Pages", key: "account-pages" },

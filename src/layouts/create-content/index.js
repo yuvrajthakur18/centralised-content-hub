@@ -42,7 +42,7 @@ import SecondaryNavbar from "examples/Navbars/SecondaryNavbar";
 import { TextField, Button, MenuItem, Input, Select, FormControl, InputLabel, Paper } from "@mui/material";
 
 const bgImage =
-  "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/profile-layout-header.jpg";
+  "https://t4.ftcdn.net/jpg/09/27/95/39/240_F_927953950_8udsj8adbeOj9YNvB7Q2G2EPzUHDDjMO.jpg";
 
 function Overview() {
   // State to store form data, including image preview URL
@@ -89,7 +89,20 @@ function Overview() {
 
 
   return (
-    <SecondaryDashLayout> 
+   
+    <SecondaryDashLayout
+    sx={{
+      backgroundImage: ({ functions: { rgba, linearGradient }, palette: { gradients } }) =>
+        `${linearGradient(
+          rgba(gradients.info.main, 0.6),
+          rgba(gradients.info.state, 0.6)
+        )}, url(${bgImage})`,
+      backgroundPositionY: "50%",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      
+    }}
+    > 
     <SecondaryNavbar />    
       
     <ArgonBox pt={5} pb={2} display="flex" justifyContent="space-between" alignItems="center" gap={2}>

@@ -166,10 +166,16 @@ function DetailedStaticsCard({ bgColor, title, count, percentage, icon, directio
           {/* Test Connection Button */}
           <Button 
             variant="contained" 
-            color="warning" 
+            style={{ 
+              backgroundColor: darkMode ? "#5E72E4" : "#F4F6FF", 
+              color: darkMode ? "#fff" : "#000", 
+              borderColor: darkMode ? "#fff" : "#000", 
+              marginTop: '10px', 
+              padding: '10px',
+              transition: 'all 0.3s ease',
+            }}
             size="small" 
-            onClick={onTestConnection} 
-            style={{ marginTop: '10px', padding:'10px'}}
+            onClick={onTestConnection}
           >
             Test Connection
           </Button>
