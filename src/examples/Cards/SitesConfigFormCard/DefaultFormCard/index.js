@@ -51,7 +51,6 @@ const DefaultFormCard = ({
     <Card
       style={{
         padding: '24px',
-        backgroundColor: cardBackgroundColor,
         borderRadius: '16px',
         boxShadow: theme.shadows[4],
         border: `1px solid ${cardBorderColor}`,
